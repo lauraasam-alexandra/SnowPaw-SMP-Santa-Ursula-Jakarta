@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco Heroes - PesonaEdu Solution</title>
+  <link rel="stylesheet" href="pesonaedu.css">
+  <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.1"></script>
+
+  <link rel="icon" type="maskot" href="WhatsApp Image 2025-12-11 at 23.56.46_4ef0c116.jpg" />
+</head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <style>
+    /* Reset dasar */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #e6f0fa;
+      color: #222;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      background: linear-gradient(135deg, #a3d5f7, #5eb8f7);
+      color: #fff;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+
+    .header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    }
+
+    .header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      font-weight: 500;
+    }
+
+    /* Container Resources */
+    .resource-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 2rem 5%;
+    }
+
+    /* Card */
+    .resource-card {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(92, 173, 250, 0.2);
+      padding: 2rem 1.5rem;
+      transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+      border: 2px solid #d0e6fb;
+    }
+
+    .resource-card:hover {
+      transform: translateY(-8px) rotate(-1deg);
+      box-shadow: 0 15px 35px rgba(92, 173, 250, 0.35);
+      background: #f0f8ff;
+    }
+
+    .resource-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.8rem;
+      color: #1e88e5;
+      font-weight: 600;
+    }
+
+    .resource-card p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .resource-card a {
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(90deg, #5eb8f7, #a3d5f7);
+      padding: 0.65rem 1.3rem;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    }
+
+    .resource-card a:hover {
+      background: linear-gradient(90deg, #3a97e0, #5eb8f7);
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(92, 173, 250, 0.4);
+    }
+
+    /* Waktu akses */
+    .access-time {
+      font-size: 0.85rem;
+      color: #7daedb;
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: linear-gradient(135deg, #5eb8f7, #a3d5f7);
+      color: #fff;
+      font-size: 0.9rem;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+    }
+  </style>
+</head>
+
+  <header class="floatingnavbar">
+    <div class="logo">
+    <img src="snow.png" alt="">
+    </div>
+<nav>
+    <ul class="nav-links">
+      <li class="dropdown">
+        <a href="index.html"><img class="home button" src="home.png" alt=""></a>
+        <ul class="homed dropdown-menu">
+          <li><a href="#about"><img class="issue dropbutton" src="issue.png" alt=""></a></li>
+          <li><a href="#facts"><img class="facts dropbutton" src="importence (2).png" alt=""></a></li>
+          <li><a href="#importence"><img class="importence dropbutton" src="importence.png" alt=""></a></li>
+          <li><a href="#vision"><img class="vision dropbutton" src="vision.png" alt=""></a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="causes1.html"><img class="cause button" src="causeseffects.png"></a>
+        <ul class="caused dropdown-menu1">
+        <li><a href="causes1.html"><img class="causes dropbutton1" src="Causes.png" alt=""></a></li>
+        <li><a href="causes1.html#effectt"><img class="effects dropbutton1" src="effect.png" alt=""></a></li>
+      </ul>
+      </li>
+      <li class="dropdown">
+        <a href="funpage.html"><img class="funpage button" src="funpage.png"></a>
+      <li class="dropdown">
+        <a href="solution.html"><img class="solution button" src="solution.png"></a>
+      <li class="dropdown">
+        <a href="aboutus.html"><img class="aboutus button" src="aboutus.png"></a>
+      <li class="dropdown">
+        <a href="aboutwebsite.html"><img class="website button" src="aboutwebsite.png"></a>
+      <li class="dropdown">
+        <a href="refrences.png"><img class="refrences button" src="refrences.png"></a>
+    </ul>
+    </nav>
+    <div class="logo1">
+    <img src="snow.png" alt="">
+    </div>
+  </header>
+
+
+<body>
+  <header class="header">
+    <h1>Daftar Resources</h1>
+    <p>Referensi dan bahan bacaan resmi untuk mendukung penelitian dan pengetahuan Anda.</p>
+  </header>
+
+ <main class="resource-container">
+    <main class="resource-container">
+  <div class="resource-card">
+    <h2>Perubahan Iklim UN Indonesia</h2>
+    <p>Penjelasan lengkap tentang apa itu perubahan iklim.</p>
+    <p class="access-time">Diakses pada 9 Desember 2025 pukul 22:17 WIB</p>
+    <a href="https://indonesia.un.org/id/172909-apa-itu-perubahan-iklim" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>National Geographic Indonesia</h2>
+    <p>Penyebab, dampak, dan solusi perubahan iklim.</p>
+    <p class="access-time">Diakses pada 9 Desember 2025 pukul 22:18 WIB</p>
+    <a href="https://nationalgeographic.grid.id/read/134101014/perubahan-iklim-pengertian-penyebab-dampak-serta-solusinya" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>GAW Bariri BMKG</h2>
+    <p>Karya tulis tentang perubahan iklim oleh BMKG.</p>
+    <p class="access-time">Diakses pada 9 Desember 2025 pukul 22:20 WIB</p>
+    <a href="https://gaw-bariri.bmkg.go.id/index.php/karya-tulis-dan-artikel/gawsarium/243-perubahan-iklim" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>UN Climate Change</h2>
+    <p>Informasi global tentang climate change.</p>
+    <p class="access-time">Diakses pada 10 Desember 2025 pukul 17:20 WIB</p>
+    <a href="https://www.un.org/en/climatechange/what-is-climate-change" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Mouseflow Heatmap</h2>
+    <p>Tips membaca heatmap dalam analisis data.</p>
+    <p class="access-time">Diakses pada 10 Desember 2025 pukul 19:45 WIB</p>
+    <a href="https://mouseflow.com/blog/how-to-interpret-a-heatmap/" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Frontiers for Kids</h2>
+    <p>Artikel ilmiah untuk anak-anak tentang perubahan iklim.</p>
+    <p class="access-time">Diakses pada 10 Desember 2025 pukul 20:15 WIB</p>
+    <a href="https://kids.frontiersin.org/articles/10.3389/frym.2022.668763#:~:text=Seiring%20waktu%2C%20kita%20membutuhkan%20lebih,membagi%20tugas%20di%20antara%20mereka" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Greenpeace UK</h2>
+    <p>Penyebab perubahan iklim dan dampaknya bagi manusia.</p>
+    <p class="access-time">Diakses pada 10 Desember 2025 pukul 20:16 WIB</p>
+    <a href="https://www.greenpeace.org.uk/challenges/climate-change/what-causes-climate-change/#:~:text=Apa%20penyebab%20perubahan%20iklim?,yang%20aman%20bagi%20semua%20orang" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>NHM Climate Change</h2>
+    <p>Pentingnya memahami perubahan iklim.</p>
+    <p class="access-time">Diakses pada 10 Desember 2025 pukul 20:16 WIB</p>
+    <a href="https://www.nhm.ac.uk/discover/what-is-climate-change-why-does-it-matter.html" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Indonesia Baik</h2>
+    <p>Infografis faktor dan dampak perubahan iklim.</p>
+    <p class="access-time">Diakses pada 10 Desember 2025 pukul 20:17 WIB</p>
+    <a href="https://indonesiabaik.id/infografis/mengenal-perubahan-iklim-faktor-dan-dampaknya#:~:text=Iklim%20berubah%20secara%20terus%20menerus,dan%20penggunaan%20bahan%20bakar%20fosil" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>MOOC UGM</h2>
+    <p>Memahami perubahan iklim: konsep dasar, penyebab, dampak global dan di Indonesia.</p>
+    <p class="access-time">Diakses pada 10 Desember 2025 pukul 21:06 WIB</p>
+    <a href="https://mooc.ugm.ac.id/memahami-perubahan-iklim-konsep-dasar-penyebab-dampak-global-dan-dampaknya-di-indonesia/" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>GAW Bariri BMKG (Dampak Indonesia)</h2>
+    <p>Dampak perubahan iklim di Indonesia.</p>
+    <p class="access-time">Diakses pada 10 Desember 2025 pukul 21:07 WIB</p>
+    <a href="https://gaw-bariri.bmkg.go.id/index.php/karya-tulis-dan-artikel/gawsarium/243-perubahan-iklim#:~:text=Dampaknya%20di%20Indonesia,karang%20akibat%20pemanasan%20suhu%20air" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Kompas Regional</h2>
+    <p>Dampak perubahan iklim global di Kalteng.</p>
+    <p class="access-time">Diakses pada 10 Desember 2025 pukul 21:45 WIB</p>
+    <a href="https://regional.kompas.com/read/2025/12/08/210953178/dampak-perubahan-iklim-global-bencana-hidrometeorologi-kian-ancam-kalteng" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Media Indonesia</h2>
+    <p>Catatan es laut Arktik dan Antarktika.</p>
+    <p class="access-time">Diakses pada 10 Desember 2025 pukul 21:48 WIB</p>
+    <a href="https://mediaindonesia.com/internasional/837708/dampak-perubahan-iklim-es-laut-arktik-tercatat-terendah-ke-10-antarktika-terus-menipis" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Adaptasi Iklim Antara News</h2>
+    <p>Adaptasi iklim untuk melindungi perempuan dan menjaga produktivitas nasional.</p>
+    <p class="access-time">Diakses pada 10 Desember 2025 pukul 21:49 WIB</p>
+    <a href="https://www.antaranews.com/berita/5297722/adaptasi-iklim-melindungi-perempuan-menjaga-produktivitas-nasional?page=all" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>National Geographic Indonesia</h2>
+    <p>Penyebab, dampak, dan solusi perubahan iklim.</p>
+    <p class="access-time">Diakses pada 10 Desember 2025 pukul 21:50 WIB</p>
+    <a href="https://nationalgeographic.grid.id/read/134101014/perubahan-iklim-pengertian-penyebab-dampak-serta-solusinya" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Gramedia Literasi</h2>
+    <p>Artikel tentang perubahan iklim global dan dampaknya.</p>
+    <p class="access-time">Diakses pada 10 Desember 2025 pukul 21:52 WIB</p>
+    <a href="https://www.gramedia.com/literasi/perubahan-iklim-global/" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Tirto - Contoh Perubahan Iklim</h2>
+    <p>Contoh nyata perubahan iklim dan dampaknya.</p>
+    <p class="access-time">Diakses pada 10 Desember 2025 pukul 21:54 WIB</p>
+    <a href="https://tirto.id/contoh-perubahan-iklim-dan-dampaknya-yang-paling-nyata-haTg" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Disperkimta Buleleng</h2>
+    <p>Peran generasi muda sebagai masa depan bangsa.</p>
+    <p class="access-time">Diakses pada 10 Desember 2025 pukul 22:12 WIB</p>
+    <a href="https://disperkimta.bulelengkab.go.id/informasi/detail/artikel/generasi-muda-masa-depan-bangsa-38#:~:text=Karena%20pemudalah%20yang%20dapat%20merubah,penting%20dan%20mendasar%20di%20NKRI" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Kompasiana - Generasi Muda</h2>
+    <p>Peran generasi muda menghadapi era globalisasi.</p>
+    <p class="access-time">Diakses pada 10 Desember 2025 pukul 22:14 WIB</p>
+    <a href="https://www.kompasiana.com/ameliazahra9057/62aef625c44f920df7492b14/peran-generasi-muda-dalam-menghadapi-era-globalisasi#:~:text=Di%20tangan%20generasi%20muda%20perubahan,ini%20dan%20dapat%20mengandalkan%20mereka" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Kumparan</h2>
+    <p>Contoh kasus perubahan iklim yang terjadi di Indonesia.</p>
+    <p class="access-time">Diakses pada 10 Desember 2025 pukul 23:49 WIB</p>
+    <a href="https://kumparan.com/berita-hari-ini/contoh-kasus-perubahan-iklim-yang-terjadi-di-indonesia-251nX6MHK3z" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Tirto - Contoh Perubahan Iklim</h2>
+    <p>Contoh nyata perubahan iklim dan dampaknya (update).</p>
+    <p class="access-time">Diakses pada 10 Desember 2025 pukul 23:50 WIB</p>
+    <a href="https://tirto.id/contoh-perubahan-iklim-dan-dampaknya-yang-paling-nyata-haTg" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>MOOC UGM</h2>
+    <p>Pemahaman konsep, penyebab, dampak, dan studi kasus perubahan & variabilitas iklim.</p>
+    <p class="access-time">Diakses pada 10 Desember 2025 pukul 23:51 WIB</p>
+    <a href="https://mooc.ugm.ac.id/perubahan-dan-variabilitas-iklim-pemahaman-konsep-penyebab-dampak-dan-studi-kasus-indonesia/" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Kompas Lestari</h2>
+    <p>48,6 juta penduduk Indonesia terpapar panas ekstrem akibat perubahan iklim.</p>
+    <p class="access-time">Diakses pada 10 Desember 2025 pukul 23:57 WIB</p>
+    <a href="https://lestari.kompas.com/read/2025/03/20/170000886/48-6-juta-penduduk-indonesia-terpapar-panas-ekstrem-dampak-perubahan-iklim" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Bisnis Hijau</h2>
+    <p>Perubahan iklim makin nyata, jutaan penduduk terpapar panas ekstrem.</p>
+    <p class="access-time">Diakses pada 10 Desember 2025 pukul 23:58 WIB</p>
+    <a href="https://hijau.bisnis.com/read/20250320/651/1863184/perubahan-iklim-makin-nyata-486-juta-penduduk-indonesia-terpapar-panas-ekstrem" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Carbon Brief</h2>
+    <p>Analisis penyebab suhu global tertinggi baru-baru ini.</p>
+    <p class="access-time">Diakses pada 10 Desember 2025 pukul 23:58 WIB</p>
+    <a href="https://www.carbonbrief.org/analysis-what-are-the-causes-of-recent-record-high-global-temperatures/" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Antara News - Emisi Karbon</h2>
+    <p>Emisi karbon global capai rekor tertinggi, RI tunjukkan tren penurunan.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 8:48 WIB</p>
+    <a href="https://www.antaranews.com/berita/4464445/emisi-karbon-global-capai-rekor-tertinggi-ri-tunjukkan-tren-penurunan" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Detik News DW</h2>
+    <p>Emisi karbon global capai rekor tertinggi pada tahun 2024.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 8:50 WIB</p>
+    <a href="https://news.detik.com/dw/d-7638696/emisi-karbon-global-capai-rekor-tertinggi-pada-tahun-2024" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Kementerian Kehutanan</h2>
+    <p>Artikel berita tentang perubahan iklim dan lingkungan.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 8:51 WIB</p>
+    <a href="https://www.kehutanan.go.id/news/article-10" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>UN Climate Change - Ocean Impacts</h2>
+    <p>Dampak perubahan iklim terhadap ekosistem laut dan samudra.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 8:56 WIB</p>
+    <a href="https://www.un.org/en/climatechange/science/climate-issues/ocean-impacts" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Bisnis Hijau</h2>
+    <p>Perubahan iklim makin nyata, jutaan penduduk Indonesia terpapar panas ekstrem.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 8:57 WIB</p>
+    <a href="https://hijau.bisnis.com/read/20250320/651/1863184/perubahan-iklim-makin-nyata-486-juta-penduduk-indonesia-terpapar-panas-ekstrem" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>WHO - Climate & Health</h2>
+    <p>Fakta terkait dampak perubahan iklim terhadap kesehatan manusia.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 15:50 WIB</p>
+    <a href="https://www.who.int/news-room/fact-sheets/detail/climate-change-and-health" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>UGM Youth Climate Food Camp</h2>
+    <p>Mendorong peran generasi muda dalam ketahanan pangan berkelanjutan di tengah krisis iklim.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 15:53 WIB</p>
+    <a href="https://gizikesehatan.ugm.ac.id/mendorong-peran-generasi-muda-dalam-ketahanan-pangan-berkelanjutan-di-tengah-krisis-iklim-melalui-youth-climate-food-camp" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>UNICEF Indonesia</h2>
+    <p>Anak-anak di Indonesia berisiko tinggi mengalami dampak krisis iklim.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 15:55 WIB</p>
+    <a href="https://www.unicef.org/indonesia/id/siaran-pers/anak-anak-di-indonesia%C2%A0berisiko-tinggi%C2%A0alami%C2%A0dampak-krisis-iklim%C2%A0-unicef%C2%A0" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>YKAN - Adaptasi Pesisir</h2>
+    <p>Adaptasi iklim dan pengurangan risiko bencana di kawasan pesisir.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 16:17 WIB</p>
+    <a href="https://www.ykan.or.id/id/program/program-kelautan/ketahanan-kawasan-pesisir/adaptasi-iklim-dan-pengurangan-resiko-bencana/" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>World Bank Climate Knowledge Portal</h2>
+    <p>Analisis risiko global dan kerentanan Indonesia terhadap bencana iklim.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 16:17 WIB</p>
+    <a href="https://climateknowledgeportal.worldbank.org/country/indonesia/vulnerability#:~:text=Analisis%20risiko%20global%20yang%20dilakukan,dan%20sistem%20alam%20yang%20terpapar.&text=Bagan%20ini%20memberikan%20gambaran%20umum,bencana%20tersebut%20terhadap%20populasi%20manusia" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>NASA Global Temperature</h2>
+    <p>Data indikator suhu global dari NASA.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 16:22 WIB</p>
+    <a href="https://science.nasa.gov/earth/explore/earth-indicators/global-temperature" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>NASA Sea Level Satellite</h2>
+    <p>Rekaman kenaikan permukaan laut dari 1993 hingga 2024.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 16:24 WIB</p>
+    <a href="https://www.jpl.nasa.gov/images/pia26189-satellite-record-of-sea-level-rise-from-1993-to-2024" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>NASA Sea Level Indicators</h2>
+    <p>Indikator perubahan permukaan laut global.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 16:26 WIB</p>
+    <a href="https://science.nasa.gov/earth/explore/earth-indicators/sea-leve" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>NASA Carbon Dioxide</h2>
+    <p>Data konsentrasi karbon dioksida atmosfer.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 16:30 WIB</p>
+    <a href="https://science.nasa.gov/earth/explore/earth-indicators/carbon-dioxide/" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>BMKG Warming Stripes</h2>
+    <p>Visualisasi pemanasan global melalui warming stripes.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 16:48 WIB</p>
+    <a href="https://www.bmkg.go.id/iklim/warming-stripes" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Kompas Skola</h2>
+    <p>Dampak perubahan iklim terhadap ekonomi global.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 19:26 WIB</p>
+    <a href="https://www.kompas.com/skola/read/2024/03/20/050000869/dampak-perubahan-iklim-terhadap-ekonomi-global" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Omah BSE</h2>
+    <p>Dampak perubahan iklim terhadap kehidupan sosial dan ekonomi di Indonesia.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 19:27 WIB</p>
+    <a href="https://www.omahbse.com/blog/bagaimana-dampak-perubahan-iklim-terhadap-kehidupan-sosial-dan-ekonomi-indonesia/" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>SMPN 56 Batam</h2>
+    <p>Dampak sosial-ekonomi dari perubahan iklim.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 19:28 WIB</p>
+    <a href="https://smpn56batam.sch.id/dampak-sosial-ekonomi-dari-perubahan-iklim/" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Antara News</h2>
+    <p>Adaptasi iklim melindungi perempuan dan menjaga produktivitas nasional.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 19:28 WIB</p>
+    <a href="https://www.antaranews.com/berita/5297722/adaptasi-iklim-melindungi-perempuan-menjaga-produktivitas-nasional?page=all" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Kompas Regional</h2>
+    <p>Dampak perubahan iklim global dan bencana hidrometeorologi di Kalteng.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 19:29 WIB</p>
+    <a href="https://regional.kompas.com/read/2025/12/08/210953178/dampak-perubahan-iklim-global-bencana-hidrometeorologi-kian-ancam-kalteng" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Telkom University</h2>
+    <p>Penyebab dan dampak perubahan iklim terhadap lingkungan.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 19:36 WIB</p>
+    <a href="https://smb.telkomuniversity.ac.id/cerita-telutizen/penyebab-dan-dampak-perubahan-iklim-terhadap-lingkungan/" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Oxfam - Climate Justice</h2>
+    <p>Berkampanye untuk keadilan iklim dan melindungi manusia & planet.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 19:39 WIB</p>
+    <a href="https://www.oxfam.org/en/climate-justice#:~:text=Berkampanye%20untuk%20Keadilan%20Iklim,terhadap%20manusia%20dan%20planet%20ini" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>UNDP Climate Promise</h2>
+    <p>Mengapa krisis iklim berdampak pada sosial-ekonomi dan antargenerasi.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 19:41 WIB</p>
+    <a href="https://climatepromise.undp.org/news-and-stories/climate-change-matter-justice-heres-why#:~:text=Krisis%20iklim%20juga%20berdampak%20pada,sosial%2Dekonomi%2C%20dan%20antargenerasi" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>IPCC Sixth Assessment Report</h2>
+    <p>Laporan keenam IPCC tentang perubahan iklim global.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 20:21 WIB</p>
+    <a href="https://www.ipcc.ch/report/sixth-assessment-report-cycle/" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>NASA - Adaptation & Mitigation</h2>
+    <p>Langkah adaptasi dan mitigasi perubahan iklim dari NASA.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 20:22 WIB</p>
+    <a href="https://science.nasa.gov/climate-change/adaptation-mitigation/" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>NOAA Sea Level Rise</h2>
+    <p>Skenario kenaikan permukaan laut dan dampaknya.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 20:22 WIB</p>
+    <a href="https://oceanservice.noaa.gov/hazards/sealevelrise/sealevelrise-scenarios.html" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>WMO - State of Global Climate</h2>
+    <p>Laporan kondisi iklim global terkini dari WMO.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 20:23 WIB</p>
+    <a href="https://wmo.int/publication-series/state-of-global-climate" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>UN Indonesia - Apa Itu Perubahan Iklim</h2>
+    <p>Panduan solusi dan aksi menghadapi perubahan iklim.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 20:25 WIB</p>
+    <a href="https://indonesia.un.org/id/172909-apa-itu-perubahan-iklim#:~:text=Kita%20menghadapi%20tantangan%20besar%20tetapi%20ada%20berbagai%20solusi&text=Tiga%20kategori%20aksi%20yang%20luas,kali%20lipat%20dari%20biaya%20awal" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Greenpeace UK - Solutions</h2>
+    <p>Solusi perubahan iklim untuk melindungi laut dan kehidupan di bumi.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 20:25 WIB</p>
+    <a href="https://www.greenpeace.org.uk/challenges/climate-change/solutions-climate-change/#:~:text=Melindungi%20lautan%20dan%20kehidupan%20di,pertahankan%20sesuai%20dengan%20Perjanjian%20Paris%20" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>GAW Bariri BMKG - Pemanasan Global</h2>
+    <p>Setiap individu dapat berkontribusi menjaga bumi tetap layak huni.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 20:27 WIB</p>
+    <a href="https://gaw-bariri.bmkg.go.id/index.php/karya-tulis-dan-artikel/gawsarium/247-pemanasan-global#:~:text=Setiap%20individu%20juga%20dapat%20berkontribusi,menjaga%20bumi%20tetap%20layak%20huni.&text=Pemanasan%20global%20adalah%20tantangan%20terbesar,masa%20depan%20yang%20lebih%20berkelanjutan" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>WRI - Ocean-based Solutions</h2>
+    <p>Solusi berbasis laut untuk mitigasi perubahan iklim.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 20:28 WIB</p>
+    <a href="https://www.wri.org/insights/ocean-based-climate-change-solutions" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>GAW Bariri BMKG - Menyelamatkan Bumi</h2>
+    <p>Langkah kecil dari kehidupan sehari-hari untuk menghadapi perubahan iklim.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 20:36 WIB</p>
+    <a href="https://gaw-bariri.bmkg.go.id/index.php/karya-tulis-dan-artikel/artikel/260-menyelamatkan-bumi-dari-perubahan-iklim-langkah-kecil-dari-kehidupan-sehari-hari" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Greenpeace UK - Solutions (Update)</h2>
+    <p>Solusi perubahan iklim untuk melindungi laut dan kehidupan di bumi.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 20:36 WIB</p>
+    <a href="https://www.greenpeace.org.uk/challenges/climate-change/solutions-climate-change/#:~:text=Melindungi%20lautan%20dan%20kehidupan%20di,pertahankan%20sesuai%20dengan%20Perjanjian%20Paris%20" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>DISLHK Badung</h2>
+    <p>7 upaya menanggulangi pemanasan global, penyebab, dan dampaknya.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 20:37 WIB</p>
+    <a href="https://dislhk.badungkab.go.id/artikel/18343-7-upaya-menanggulangi-pemanasan-global-penyebab-dan-dampaknya#:~:text=Menggunakan%20Energi%20Alternatif-,Kita%20dapat%20menggunakan%20energi%20alternatif%20guna%20meminimalisir%20hal%20%E2%80%93%20hal%20yang,panas%20bumi%2C%20angin%20atau%20air" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Liputan6 Tekno</h2>
+    <p>3 teknologi inovatif untuk mitigasi perubahan iklim secara global.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 20:47 WIB</p>
+    <a href="https://www.liputan6.com/tekno/read/5334745/3-teknologi-inovatif-untuk-mitigasi-perubahan-iklim#:~:text=Salah%20satu%20teknologi%20yang%20menonjol,panjang%20perluasan%20cakupan%20secara%20global" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Delve Insights</h2>
+    <p>Teknologi inovatif untuk melawan perubahan iklim: 7 solusi favorit.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 20:48 WIB</p>
+    <a href="https://www.delve.com/insights/innovative-technology-to-combat-climate-change-our-7-favorite-solutions" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>BBPP Binuang</h2>
+    <p>Penerapan teknologi adaptif terhadap perubahan iklim untuk pertanian.</p>
+    <p class="access-time">Diakses pada 11 Desember 2025 pukul 20:48 WIB</p>
+    <a href="https://bbppbinuang.bppsdmp.pertanian.go.id/artikel/penerapan-teknologi-adaptif-terhadap-perubahan-iklim#:~:text=Untuk%20mengantisipasi%20dan%20meminimalisisr%20risiko,yang%20adaptif%20terhadap%20perubahan%20iklim.&text=Vaietas%20unggul%20adatif%20yang%20diperlukan,penelitian%20dan%20pengembangan%20pemuliaan%20tanaman.&text=tanah.,%2Dmacak%2C%20dan%20irigasi%20parit.&text=%2D%20Mengukur%20kebutuhan%20N%20pada%20tanaman,bagan%20warna%20daun%20(BWD).&text=Teknologi%20budidaya%20lahan%20kering%20adalah,dan%20dam%20parit" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>National Geographic Indonesia</h2>
+    <p>Penyebab, dampak, dan solusi perubahan iklim.</p>
+    <p class="access-time">Diakses pada 12 Desember 2025 pukul 6:39 WIB</p>
+    <a href="https://nationalgeographic.grid.id/read/134101014/perubahan-iklim-pengertian-penyebab-dampak-serta-solusinya" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Kompas Buku</h2>
+    <p>7 faktor yang menyebabkan terjadinya perubahan iklim.</p>
+    <p class="access-time">Diakses pada 12 Desember 2025 pukul 6:41 WIB</p>
+    <a href="https://buku.kompas.com/read/2927/inilah-7-faktor-yang-menyebabkan-terjadinya-perubahan-iklim" target="_blank">Kunjungi Website</a>
+  </div>
+
+  <div class="resource-card">
+    <h2>Detik Edu</h2>
+    <p>10 penyebab perubahan iklim secara alami dan aktivitas manusia.</p>
+    <p class="access-time">Diakses pada 12 Desember 2025 pukul 6:42 WIB</p>
+    <a href="https://www.detik.com/edu/detikpedia/d-6786031/10-penyebab-perubahan-iklim-secara-alami-dan-aktivitas-manusia" target="_blank">Kunjungi Website</a>
+  </div>
+</main>
+
+
+</body>
+
+</html>
