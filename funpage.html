@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco Heroes - PesonaEdu Solution</title>
+  <link rel="stylesheet" href="pesonaedu.css">
+  <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.1"></script>
+
+  <link rel="icon" type="maskot" href="WhatsApp Image 2025-12-11 at 23.56.46_4ef0c116.jpg" />
+</head>
+<style>
+    
+body {
+    background: #eef0f3;
+    margin: 0;
+    padding-top: 100px;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.header-bar {
+    position: absolute;
+    top: 280px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+    overflow: hidden;
+    z-index: 900; /* navbar tetap di atas */
+}
+
+
+.track {
+    display: flex;
+    white-space: nowrap;
+    width: fit-content;
+    animation: marquee 17s linear infinite; 
+}
+
+.text-block {
+    font-size: 18px;
+    font-weight: 700;
+    padding-right: 300px; 
+}
+
+.time {
+    color: #12a84e;
+}
+
+@keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+</style>
+</head>
+  <header class="floatingnavbar">
+    <div class="logo">
+    <img src="snow.png" alt="">
+    </div>
+<nav>
+    <ul class="nav-links">
+      <li class="dropdown">
+        <a href="index.html"><img class="home button" src="home.png" alt=""></a>
+        <ul class="homed dropdown-menu">
+          <li><a href="#about"><img class="issue dropbutton" src="issue.png" alt=""></a></li>
+          <li><a href="#facts"><img class="facts dropbutton" src="importence (2).png" alt=""></a></li>
+          <li><a href="#importence"><img class="importence dropbutton" src="importence.png" alt=""></a></li>
+          <li><a href="#vision"><img class="vision dropbutton" src="vision.png" alt=""></a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="causes1.html"><img class="cause button" src="causeseffects.png"></a>
+        <ul class="caused dropdown-menu1">
+        <li><a href="causes1.html"><img class="causes dropbutton1" src="Causes.png" alt=""></a></li>
+        <li><a href="causes1.html#effectt"><img class="effects dropbutton1" src="effect.png" alt=""></a></li>
+      </ul>
+      </li>
+      <li class="dropdown">
+        <a href="funpage.html"><img class="funpage button" src="funpage.png"></a>
+      <li class="dropdown">
+        <a href="solution.html"><img class="solution button" src="solution.png"></a>
+      <li class="dropdown">
+        <a href="aboutus.html"><img class="aboutus button" src="aboutus.png"></a>
+      <li class="dropdown">
+        <a href="aboutwebsite.html"><img class="website button" src="aboutwebsite.png"></a>
+      <li class="dropdown">
+        <a href="refrences.html"><img class="refrences button" src="refrences.png"></a>
+    </ul>
+    </nav>
+    <div class="logo1">
+    <img src="snow.png" alt="">
+    </div>
+  </header> 
+
+<body>
+  <img class="solusititle" src="TITLESOLUTION.png" alt="">
+<div class="header-bar">
+    <div class="track" id="track">
+        <div class="text-block" id="text1"></div>
+        <div class="text-block" id="text2"></div>
+    </div>
+</div>
+
+<script>
+function formatHMS(date) {
+    return date.getUTCHours().toString().padStart(2,"0") + ":" +
+           date.getUTCMinutes().toString().padStart(2,"0") + ":" +
+           date.getUTCSeconds().toString().padStart(2,"0");
+}
+
+function generateText() {
+    const hari = ["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
+    const bulan = ["Januari","Februari","Maret","April","Mei","Juni","Juli",
+                   "Agustus","September","Oktober","November","Desember"];
+
+    const now = new Date();
+
+    const wib = new Date(now.getTime() + 7 * 3600000);
+    const wita = new Date(now.getTime() + 8 * 3600000);
+    const wit  = new Date(now.getTime() + 9 * 3600000);
+    const utc  = new Date(now.getTime());
+
+    const dateText =
+        `${hari[now.getDay()]}, ${now.getDate()} ${bulan[now.getMonth()]} ${now.getFullYear()}`;
+
+    return (
+        `${dateText}  •  Standar Waktu Indonesia  •  ` +
+        `WIB ${formatHMS(wib)}  /  ` +
+        `WITA ${formatHMS(wita)}  /  ` +
+        `WIT ${formatHMS(wit)}  /  ` +
+        `UTC ${formatHMS(utc)}`
+    );
+}
+
+function updateText() {
+    const t = generateText();
+    document.getElementById("text1").textContent = t;
+    document.getElementById("text2").textContent = t; 
+}
+
+updateText();
+setInterval(updateText, 1000);
+</script>
+<style>
+/* ===== CLIMATE WIDGET ===== */
+.climate-widget{
+  z-index: 3;
+  font-family:"dunkin",sans-serif;
+      background:url(bg\ section2.png);
+}
+
+.climate-widget header{
+  text-align:center;
+  padding:40px 15px 5px;
+}
+.climate-widget h1{
+  font-size:34px;
+  font-weight:700;
+  color:#19158e;
+  font-family: 'porkys';
+  -webkit-text-stroke: white solid 2px;
+  margin-top: 60px;
+}
+.climate-widget p{
+  font-size:18px;
+  color:#14c0cd;
+  margin:10px 0 0;
+}
+.climate-wrapper{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:25px;
+  padding:40px 20px;
+}
+.climate-card{
+  width:250px;
+  padding:30px 20px;
+  background:rgba(54, 151, 255, 0.167);
+  border-radius:18px;
+  text-align:center;
+  border: white solid 3px;
+  backdrop-filter:blur(6px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.15);
+  position:relative;
+}
+.climate-icon{
+  width:70px;
+  height:70px;
+  background:#45e3ff7d;
+  border-radius:50%;
+  position:absolute;
+  top:-35px;
+  left:50%;
+  border: #00f6ff 3px solid;
+  transform:translateX(-50%);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.climate-icon img{width:38px;}
+.climate-value{
+  margin-top:40px;
+  font-size:40px;
+  font-weight:700;
+  color:#173c91;
+}
+.climate-label{
+  margin-top:8px;
+  font-size:16px;
+  color:#5335ff;
+}
+
+/* POPUP */
+.climate-popup-bg{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.4);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+.climate-popup{
+  background:#fff;
+  padding:30px 25px;
+  width:300px;
+  border-radius:16px;
+  text-align:center;
+  box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
+.climate-popup h2{
+  margin:0;
+  color:#0c4b31;
+  font-size:22px;
+}
+.climate-popup p{
+  font-size:15px;
+  color:#444;
+  margin:12px 0 20px;
+}
+.climate-popup button{
+  width:100%;
+  padding:12px;
+  margin-top:10px;
+  border:none;
+  border-radius:10px;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+}
+.climate-allow{background:#0a6f49;color:#fff;}
+.climate-deny{background:#ddd;color:#333;}
+</style>
+
+<img class="batasbaru2" src="batasbaru.png" alt="">
+
+<div class="climate-widget">
+
+  <div class="climate-popup-bg" id="climatePopup">
+    <div class="climate-popup">
+      <h2>Allow Location?</h2>
+      <p>We use your location to show climate data around you.</p>
+      <button class="climate-allow" onclick="climateAllow()">Allow</button>
+      <button class="climate-deny" onclick="climateDeny()">No, thanks</button>
+    </div>
+  </div>
+
+  <header>
+    <h1>🌍 Climate Change in Your Area 🔥</h1>
+    <p id="climateLocation">Waiting for permission...</p>
+  </header>
+
+  <div class="climate-wrapper">
+    <div class="climate-card">
+      <div class="climate-icon"><img src="https://cdn-icons-png.flaticon.com/512/483/483361.png"></div>
+      <div class="climate-value" id="climateTemp">0</div>
+      <div class="climate-label">Temperature (°C)</div>
+    </div>
+
+    <div class="climate-card">
+      <div class="climate-icon"><img src="https://cdn-icons-png.flaticon.com/512/414/414974.png"></div>
+      <div class="climate-value" id="climateCO2">0</div>
+      <div class="climate-label">CO₂ Concentration (ppm)</div>
+    </div>
+
+    <div class="climate-card">
+      <div class="climate-icon"><img src="https://cdn-icons-png.flaticon.com/512/8058/8058247.png"></div>
+      <div class="climate-value" id="climateSea">0</div>
+      <div class="climate-label">Sea Level Rise (mm)</div>
+    </div>
+
+    <div class="climate-card">
+      <div class="climate-icon"><img src="https://cdn-icons-png.flaticon.com/512/1163/1163624.png"></div>
+      <div class="climate-value" id="climateEmission">0</div>
+      <div class="climate-label">Emissions (ton CO₂/day)</div>
+    </div>
+
+    <div class="climate-card">
+      <div class="climate-icon"><img src="https://cdn-icons-png.flaticon.com/512/3094/3094836.png"></div>
+      <div class="climate-value" id="climateEnergy">0</div>
+      <div class="climate-label">% Non-Renewable Energy</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function climateCount(el,target,d=1000){
+  let s=null;
+  function step(t){
+    if(!s) s=t;
+    let p=Math.min((t-s)/d,1);
+    el.textContent=Math.floor(p*target).toLocaleString();
+    if(p<1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+const CLIMATE_FALLBACK={
+  location:"Indonesia",
+  temp:30,
+  co2:420,
+  sea:12,
+  energy:82
+};
+async function climateFullLocation(lat,lon){
+  const r = await fetch(
+    `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=id`
+  );
+  const d = await r.json();
+
+  const district = d.locality || d.subLocality || "";
+  const city = d.city || d.localityInfo?.administrative?.[2]?.name || "";
+  const province = d.principalSubdivision || "";
+  const country = d.countryName || "";
+
+  return [district, city, province, country]
+    .filter(Boolean)
+    .join(", ");
+}
+
+async function climateTemp(lat,lon){
+  const r = await fetch(
+    `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`
+  );
+  const j = await r.json();
+  return j.current_weather.temperature;
+}
+
+function climateFill(loc,temp){
+  document.getElementById("climateLocation").textContent = loc;
+  climateCount(climateTempEl,temp);
+  climateCount(climateCO2El,CLIMATE_FALLBACK.co2);
+  climateCount(climateSeaEl,CLIMATE_FALLBACK.sea);
+  climateCount(climateEmissionEl,5000);
+  climateCount(climateEnergyEl,CLIMATE_FALLBACK.energy);
+}
+
+const climateTempEl=document.getElementById("climateTemp");
+const climateCO2El=document.getElementById("climateCO2");
+const climateSeaEl=document.getElementById("climateSea");
+const climateEmissionEl=document.getElementById("climateEmission");
+const climateEnergyEl=document.getElementById("climateEnergy");
+
+function climateAllow(){
+  document.getElementById("climatePopup").style.display="none";
+  navigator.geolocation.getCurrentPosition(async p=>{
+    const location = await climateFullLocation(
+      p.coords.latitude,
+      p.coords.longitude
+    );
+    const temp = await climateTemp(
+      p.coords.latitude,
+      p.coords.longitude
+    );
+    climateFill(location,temp);
+  },climateDeny);
+}
+
+function climateDeny(){
+  document.getElementById("climatePopup").style.display="none";
+  climateFill(CLIMATE_FALLBACK.location,CLIMATE_FALLBACK.temp);
+}
+</script>
+
+<div class="page-wrapper">
+
+  <div class="game-wrapper">
+    <div id="gameArea">
+      <div id="player">🐧</div>
+      <div id="score">Score: 0</div>
+      <button id="pauseBtn">⏸</button>
+    </div>
+
+    <div id="overlay">
+      <h2>Flappy Penguin Arctic</h2>
+      <button id="startBtn" class="btn">START</button>
+      <p>Press SPACE or CLICK</p>
+    </div>
+
+    <div id="factOverlay"></div>
+  </div>
+
+  <section id="snowFactsGame">
+    <div class="snowBox">
+      <div class="snowTop">
+        <span id="snowScore">Facts: 0 / 10</span>
+        <button id="snowPause" class="btn-icon">⏸</button>
+      </div>
+
+      <div id="snowflake">❄</div>
+      <div class="snowOverlay" id="snowStartOverlay">
+        <h3>Snow Facts Challenge</h3>
+        <button id="snowStart" class="btn">START</button>
+      </div>
+      <div class="snowOverlay hidden" id="snowEndOverlay">
+        <h3>🎉 Great Job!</h3>
+        <p>You collected all snow facts ❄</p>
+        <button id="snowRestart" class="btn">RESTART</button>
+      </div>
+    </div>
+
+    <div id="snowFactBox"></div>
+  </section>
+
+</div>
+
+<style>
+  *{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  background:#081626;
+  font-family:'dunkin',sans-serif;
+  color:#fff;
+}
+
+.game-wrapper{
+  width:900px;
+  height:420px;
+  border:3px solid #00ffff;
+  border-radius:20px;
+  background:#071021;
+  position:relative;
+  box-shadow:0 0 20px rgba(0,255,255,.2);
+}
+
+#gameArea{
+  width:100%;
+  height:100%;
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(to bottom,#071021,#0f2a44);
+  border-radius:16px;
+}
+
+.particle{
+  position:absolute;
+  width:4px;
+  height:4px;
+  background:rgba(255,255,255,.7);
+  border-radius:50%;
+  animation:fall linear infinite;
+}
+
+@keyframes fall{
+  from{transform:translateY(-10px);opacity:.8;}
+  to{transform:translateY(450px);opacity:0;}
+}
+
+#player{
+  position:absolute;
+  left:120px;
+  font-size:36px;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:3;
+}
+
+.pipe{
+  position:absolute;
+  width:60px;
+  background:#6fd0ff;
+  border-radius:14px;
+}
+.bonus{
+  position:absolute;
+  font-size:24px;
+  z-index:4;
+}
+
+#score{
+  position:absolute;
+  top:12px;
+  left:14px;
+  font-size:1.2em;
+  color:#0ff;
+  z-index:5;
+}
+
+#overlay{
+  position:absolute;
+  inset:0;
+  background:url(ice\ cubes.png);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  border-radius:16px;
+  z-index:10;
+}
+
+#overlay.hidden{
+  display:none;
+}
+
+button{
+  padding:12px 36px;
+  border-radius:999px;
+  border:2px solid #00ffff;
+  background:rgba(55, 198, 255, 0.374);
+  color:#5d00ff;
+  font-weight:bold;
+  cursor:pointer;
+  transition:.25s;
+}
+
+button:hover{
+  background:#00ffff;
+  color:#000;
+}
+
+/* FACT BOX */
+#factOverlay{
+  position:absolute;
+  bottom:14px;
+  left:50%;
+  transform:translateX(-50%);
+  background:rgba(20,25,35,.95);
+  padding:12px 20px;
+  border-radius:14px;
+  border:1px solid #00ffff;
+  color:#0ff;
+  font-size:.85em;
+  display:none;
+  z-index:6;
+}
+
+#pauseBtn{
+  position:absolute;
+  top:12px;
+  right:16px;
+  width:46px;
+  height:46px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  border:3px solid #7ffcff;
+  background:linear-gradient(145deg,#0ff,#6fd0ff);
+  color:#003344;
+  font-size:20px;
+  font-weight:bold;
+  line-height:1;
+  cursor:pointer;
+  z-index:6;
+  box-shadow:
+    0 0 10px rgba(0,255,255,.6),inset 0 0 6px rgba(255,255,255,.6);
+  transition:.2s ease;
+}
+#pauseBtn:hover{
+  transform:scale(1.1);
+}
+#pauseBtn:active{
+  transform:scale(.95);
+}
+
+
+#pauseBtn:hover{
+  transform:scale(1.1);
+  box-shadow:
+    0 0 16px rgba(0,255,255,.9),
+    inset 0 0 8px rgba(255,255,255,.9);
+}
+
+#pauseBtn:active{
+  transform:scale(.95);
+}
+
+
+
+/* _______________________________________________________________________________ */
+*{box-sizing:border-box;}
+
+body{
+  margin:0;
+  background:url(icebuttoncopy.png);
+  font-family:'dunkin',sans-serif;
+  color:#fff;
+}
+
+.page-wrapper{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* ===== FLAPPY (UKURAN LAMA, FIX) ===== */
+.game-wrapper{
+  width:900px;
+  height:420px;
+  margin-top:40px;
+  border:3px solid #00ffff;
+  border-radius:20px;
+  background:#071021;
+  position:relative;
+}
+
+#gameArea{
+  width:100%;
+  height:100%;
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(#071021,#0f2a44);
+  border-radius:16px;
+}
+
+/* ===== BUTTON STYLE (DIPAKAI KEDUA GAME) ===== */
+.btn{
+  padding:12px 36px;
+  border-radius:999px;
+  border:2px solid #00ffff;
+  background:transparent;
+  color:#00ffff;
+  font-weight:bold;
+  cursor:pointer;
+  transition:.2s;
+}
+.btn:hover{
+  background:#00ffff;
+  color:#000;
+}
+
+.btn-icon{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  border:2px solid #00ffff;
+  background:#00ffff;
+  color:#003344;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* ===== SNOW FACT GAME ===== */
+
+.snowBox{
+  height:260px;
+  background:#071a2f;
+  border:4px solid #00f6ff;
+  border-radius:22px;
+  position:relative;
+  overflow:hidden;
+}
+
+.snowTop{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 16px;
+  color:#0ff;
+}
+
+#snowflake{
+  position:absolute;
+  top:-40px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:32px;
+  cursor:pointer;
+}
+
+.snowOverlay{
+  position:absolute;
+  inset:0;
+  background:rgba(5,15,35,.9);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.snowOverlay.hidden{display:none;}
+
+#snowFactBox{
+  margin-top:14px;
+  padding:12px 16px;
+  background:#06162c;
+  border:1px solid #0ff;
+  border-radius:14px;
+  display:none;
+}
+
+#snowFactsGame{
+  width:900px;
+  height:420px;
+  margin:60px auto;
+}
+
+.snowBox{
+  width:100%;
+  height:100%;
+  background:#071a2f;
+  border:4px solid #00f6ff;
+  border-radius:22px;
+  position:relative;
+  overflow:hidden;
+}
+
+.snowOverlay{
+  position:absolute;
+  inset:0;
+  background:rgba(5,15,35,.92);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  z-index:10;
+}
+
+.snowOverlay.hidden{
+  display:none;
+}
+</style>
+<script>
+  const gameArea = document.getElementById("gameArea");
+const player = document.getElementById("player");
+const scoreEl = document.getElementById("score");
+const overlay = document.getElementById("overlay");
+const startBtn = document.getElementById("startBtn");
+const factOverlay = document.getElementById("factOverlay");
+const pauseBtn = document.getElementById("pauseBtn");
+
+const W = gameArea.clientWidth;
+const H = gameArea.clientHeight;
+
+/* SNOWFLAKES */
+for(let i=0;i<70;i++){
+  const p=document.createElement("div");
+  p.className="particle";
+  p.style.left=Math.random()*W+"px";
+  p.style.top=Math.random()*H+"px";
+  p.style.animationDuration=4+Math.random()*6+"s";
+  gameArea.appendChild(p);
+}
+
+/* FACTS */
+const facts = [
+  "Antarctica stores about 70% of Earth's fresh water.",
+  "Penguins can swim faster than Olympic swimmers.",
+  "Antarctica has no permanent human residents.",
+  "Melting ice raises global sea levels worldwide.",
+  "Penguins huddle together to stay warm.",
+  "Some penguins can dive over 500 meters deep.",
+  "Antarctica is the coldest place on Earth.",
+  "Ice reflects sunlight, helping cool the planet.",
+  "Climate change is shrinking polar ice rapidly.",
+  "Penguins have special waterproof feathers.",
+  "Antarctica is technically a desert.",
+  "Sea ice is crucial for polar food chains.",
+  "Penguins spend most of their life in the ocean.",
+  "Antarctica has strong winds called katabatic winds.",
+  "Rising temperatures threaten polar ecosystems.",
+  "Penguins communicate using body sounds.",
+  "Protecting polar ice helps protect Earth.",
+  "Antarctica was once covered in forests.",
+  "Many polar animals depend on sea ice to survive.",
+  "Ice loss affects global weather patterns.",
+  "Penguins molt all their feathers at once.",
+  "Antarctica holds clues to Earth’s climate history.",
+  "Polar ice helps regulate Earth’s temperature.",
+  "Penguins cannot fly, but they are expert swimmers.",
+  "Antarctica is larger than Europe."
+];
+
+/* GAME STATE */
+let running=false;
+let paused=false;
+let y=H/2, v=0;
+let frame=0, score=0;
+let pipes=[], bonuses=[];
+let loop;
+
+/* PHYSICS */
+const gravity=0.28;
+const jump=-6;
+const pipeSpeed=2;
+const pipeGap=170;
+const pipeRate=140;
+
+/* START */
+function startGame(){
+  overlay.classList.add("hidden");
+  running=true;
+  paused=false;
+  pauseBtn.textContent="⏸";
+
+  y=H/2; v=0; frame=0; score=0;
+  scoreEl.textContent="Score: 0";
+
+  pipes.forEach(p=>{p.top.remove();p.bottom.remove();});
+  bonuses.forEach(b=>b.remove());
+  pipes=[]; bonuses=[];
+
+  clearInterval(loop);
+  loop=setInterval(update,20);
+}
+
+/* INPUT */
+function flap(){
+  if(!running || paused) return;
+  v=jump;
+}
+
+window.addEventListener("keydown",e=>{
+  if(e.code==="Space"){ e.preventDefault(); flap(); }
+});
+gameArea.addEventListener("click",flap);
+
+/* PAUSE */
+pauseBtn.addEventListener("click",()=>{
+  if(!running) return;
+  paused=!paused;
+  pauseBtn.textContent = paused ? "▶" : "⏸";
+});
+
+/* PIPE + BONUS */
+function createPipe(){
+  const h=Math.random()*(H/2)+40;
+
+  const top=document.createElement("div");
+  top.className="pipe";
+  top.style.height=h+"px";
+  top.style.left=W+"px";
+
+  const bottom=document.createElement("div");
+  bottom.className="pipe";
+  bottom.style.height=(H-h-pipeGap)+"px";
+  bottom.style.top=(h+pipeGap)+"px";
+  bottom.style.left=W+"px";
+
+  gameArea.append(top,bottom);
+  pipes.push({top,bottom,passed:false});
+
+  if(Math.random()<0.6){
+    const b=document.createElement("div");
+    b.className="bonus";
+    b.textContent="❄";
+    b.style.left=W+"px";
+    b.style.top=(h+pipeGap/2)+"px";
+    gameArea.appendChild(b);
+    bonuses.push(b);
+  }
+}
+
+/* UPDATE — FIXED */
+function update(){
+  if(paused) return;
+
+  v += gravity;
+  y += v;
+
+  /* SET POSISI DULU */
+  player.style.top = y + "px";
+
+  /* ✅ CEK LANTAI (VISUAL REAL) */
+  const playerRect = player.getBoundingClientRect();
+  const gameRect = gameArea.getBoundingClientRect();
+
+  if(playerRect.bottom >= gameRect.bottom){
+    endGame();
+    return;
+  }
+
+  if(y < 0){
+    y = 0;
+    v = 0;
+  }
+
+  if(frame % pipeRate === 0) createPipe();
+
+  pipes.forEach((p,i)=>{
+    let x=parseFloat(p.top.style.left)-pipeSpeed;
+    p.top.style.left=x+"px";
+    p.bottom.style.left=x+"px";
+
+    if(x+60<120 && !p.passed){
+      score++;
+      scoreEl.textContent="Score: "+score;
+      p.passed=true;
+    }
+
+    if(
+      x<160 && x+60>120 &&
+      (y<p.top.offsetHeight || y+40>p.bottom.offsetTop)
+    ){
+      endGame();
+    }
+
+    if(x+60<0){
+      p.top.remove();
+      p.bottom.remove();
+      pipes.splice(i,1);
+    }
+  });
+
+  bonuses.forEach((b,i)=>{
+    let x=parseFloat(b.style.left)-pipeSpeed;
+    b.style.left=x+"px";
+
+    if(x<160 && x+20>120 && y<b.offsetTop+20 && y+40>b.offsetTop){
+      factOverlay.textContent=facts[Math.floor(Math.random()*facts.length)];
+      factOverlay.style.display="block";
+      setTimeout(()=>factOverlay.style.display="none",2500);
+      b.remove();
+      bonuses.splice(i,1);
+    }
+
+    if(x+20<0){
+      b.remove();
+      bonuses.splice(i,1);
+    }
+  });
+
+  frame++;
+}
+
+/* END */
+function endGame(){
+  running=false;
+  paused=false;
+  clearInterval(loop);
+  overlay.classList.remove("hidden");
+}
+
+/* INIT */
+startBtn.addEventListener("click",startGame);
+player.style.top=(H/2)+"px";
+
+
+// _________________________________________________________________________________________________
+(() => {
+  const snow = document.getElementById("snowflake");
+  const scoreEl = document.getElementById("snowScore");
+  const factBox = document.getElementById("snowFactBox");
+  const box = document.querySelector(".snowBox");
+
+  const startOverlay = document.getElementById("snowStartOverlay");
+  const endOverlay = document.getElementById("snowEndOverlay");
+
+  const startBtn = document.getElementById("snowStart");
+  const restartBtn = document.getElementById("snowRestart");
+  const pauseBtn = document.getElementById("snowPause");
+
+  let y = -40;
+  let score = 0;
+  let running = false;
+  let paused = false;
+  const MAX_SCORE = 10;
+
+  const facts = [
+    "Antarctica stores 70% of Earth's fresh water.",
+    "Sea ice helps regulate global temperature.",
+    "Antarctica is the coldest place on Earth.",
+    "Melting ice raises sea levels worldwide.",
+    "Ice cores show climate history.",
+    "Polar regions warm faster than others.",
+    "Antarctica is a desert.",
+    "Ice reflects sunlight back to space.",
+    "Protecting ice protects ecosystems.",
+    "Climate change threatens polar life."
+  ];
+
+  function resetSnow(){
+    y = -40;
+    snow.style.left =
+      Math.random() * (box.clientWidth - 40) + "px";
+  }
+
+  function loop(){
+    if(!running || paused) return;
+
+    y += 1.4;
+    snow.style.top = y + "px";
+
+    if(y > box.clientHeight){
+      resetSnow();
+    }
+    requestAnimationFrame(loop);
+  }
+
+  snow.onclick = () => {
+    if(!running || paused) return;
+
+    score++;
+    scoreEl.textContent = `Facts: ${score} / ${MAX_SCORE}`;
+
+    factBox.textContent = facts[score - 1];
+    factBox.style.display = "block";
+    setTimeout(()=>factBox.style.display="none",3000);
+
+    if(score >= MAX_SCORE){
+      running = false;
+      endOverlay.classList.remove("hidden");
+      return;
+    }
+
+    resetSnow();
+  };
+
+  startBtn.onclick = () => {
+    score = 0;
+    scoreEl.textContent = "Facts: 0 / 10";
+    running = true;
+    paused = false;
+    startOverlay.classList.add("hidden");
+    pauseBtn.textContent = "⏸";
+    resetSnow();
+    loop();
+  };
+
+  restartBtn.onclick = () => {
+    endOverlay.classList.add("hidden");
+    startOverlay.classList.remove("hidden");
+  };
+
+  pauseBtn.onclick = () => {
+    if(!running) return;
+    paused = !paused;
+    pauseBtn.textContent = paused ? "▶" : "⏸";
+    if(!paused) loop();
+  };
+})();
+</script>
+
+  <footer>
+    <p>© 2025 PesonaEdu Solution | Designed for Eco Heroes Project</p>
+  </footer>
