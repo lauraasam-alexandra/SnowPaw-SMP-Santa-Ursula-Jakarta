@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco Heroes - PesonaEdu Solution</title>
+  <link rel="stylesheet" href="pesonaedu.css">
+  <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.1"></script>
+
+  <link rel="icon" type="maskot" href="WhatsApp Image 2025-12-11 at 23.56.46_4ef0c116.jpg" />
+</head>
+
+  <body>
+  <div class="fish-cursor">💧</div>
+  <script src="pesonaedu.js"></script>
+
+  <header class="floatingnavbar">
+    <div class="logo">
+    <img src="snow.png" alt="">
+    </div>
+<nav>
+    <ul class="nav-links">
+      <li class="dropdown">
+        <a href="index.html"><img class="home button" src="home.png" alt=""></a>
+        <ul class="homed dropdown-menu">
+          <li><a href="#about"><img class="issue dropbutton" src="issue.png" alt=""></a></li>
+          <li><a href="#facts"><img class="facts dropbutton" src="importence (2).png" alt=""></a></li>
+          <li><a href="#importence"><img class="importence dropbutton" src="importence.png" alt=""></a></li>
+          <li><a href="#vision"><img class="vision dropbutton" src="vision.png" alt=""></a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="causes1.html"><img class="cause button" src="causeseffects.png"></a>
+        <ul class="caused dropdown-menu1">
+        <li><a href="causes1.html"><img class="causes dropbutton1" src="Causes.png" alt=""></a></li>
+        <li><a href="causes1.html#effectt"><img class="effects dropbutton1" src="effect.png" alt=""></a></li>
+      </ul>
+      </li>
+      <li class="dropdown">
+        <a href="funpage.html"><img class="funpage button" src="funpage.png"></a>
+      <li class="dropdown">
+        <a href="solution.html"><img class="solution button" src="solution.png"></a>
+      <li class="dropdown">
+        <a href="aboutus.html"><img class="aboutus button" src="aboutus.png"></a>
+      <li class="dropdown">
+        <a href="aboutwebsite.html"><img class="website button" src="aboutwebsite.png"></a>
+      <li class="dropdown">
+        <a href="refrences.html"><img class="refrences button" src="refrences.png"></a>
+    </ul>
+    </nav>
+    <div class="logo1">
+    <img src="snow.png" alt="">
+    </div>
+  </header>
+
+<style>
+
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:url(Untitled\ design\ \(7\).png)
+}
+
+
+.founder-section{
+  padding:80px 10%;
+  background:transparent;
+}
+
+.founder-title{
+  text-align:center;
+  font-family: 'porkys';
+  font-size:100px;
+  font-weight:600;
+  margin-bottom:70px;
+  color:#266fb4;
+  -webkit-text-stroke: white 5px;
+}
+.founder-title:hover{
+  text-align:center;
+  font-family: 'porkys';
+  font-size:100px;
+  font-weight:600;
+  margin-bottom:70px;
+  color:#266fb4;
+  -webkit-text-stroke: rgb(52, 201, 255) 5px;
+  transition: ease-in-out 0.5s;
+}
+
+
+.list{
+  max-width:900px;
+  margin-top: -50px;
+  display:flex;
+  margin-left: -50px;
+  margin-left: 200px;
+  flex-direction:column;
+  gap:30px;
+}
+
+.item{
+  display:flex;
+  align-items:center;
+  gap:30px;
+  cursor:pointer;
+  transition:.3s ease;
+}
+
+.photo{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  overflow:hidden;
+  flex-shrink:0;
+  background:#ccc;
+  border:4px solid rgba(0,0,0,.1);
+  transition:.3s ease;
+}
+
+.photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.box{
+  width:460px;
+  padding:22px 26px;
+  background:#fff;
+  border-radius:18px;
+  border:2px solid #281a73;
+  transition:.3s ease;
+}
+
+.box h2{
+  margin:0;
+  font-size:22px;
+  color:#29c1f9;
+}
+
+.box h4{
+  margin:6px 0 10px;
+  font-weight:500;
+  color:#2b2ede;
+}
+
+.box p{
+  margin:0;
+  font-size:14.5px;
+  line-height:1.6;
+  color:#888;
+}
+
+.foundtitle{
+  margin-top: -60px;
+}
+.item:hover{
+  transform:translateX(6px);
+}
+
+.item:hover .photo{
+  box-shadow:0 0 20px rgba(0,0,0,.25);
+}
+
+/* CLICK EFFECT */
+.item.dim{
+  opacity:.25;
+}
+.item.active{
+  opacity:1;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .item{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .box{
+    width:100%;
+  }
+}
+</style>
+
+</head>
+<body>
+
+  <img class="foundtitle" src="founderstitle.png" alt="">
+<section class="founder-section">
+  <h2 class="founder-title">Founders</h2>
+
+  <div class="list">
+
+    <div class="item active">
+      <div class="photo">
+        <img src="angel.jpeg" alt="Founder 1">
+      </div>
+      <div class="box">
+        <h2>Angeline Clarabelle</h2>
+        <h4>Founder</h4>
+      </div>
+    </div>
+
+    <div class="item active">
+      <div class="photo">
+        <img src="sam.jpeg" alt="Founder 2">
+      </div>
+      <div class="box">
+        <h2>Samantha Alexandra</h2>
+        <h4>Founder</h4>
+      </div>
+    </div>
+
+    <div class="item active">
+      <div class="photo">
+        <img src="about3.jpeg" alt="Founder 3">
+      </div>
+      <div class="box">
+        <h2>Gabrielle Cheryl Ho</h2>
+        <h4>Founder</h4>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ===== SCRIPT CLICK EFFECT ===== -->
+<script>
+const items = document.querySelectorAll('.item');
+
+items.forEach(item=>{
+  item.addEventListener('click',()=>{
+    items.forEach(i=>{
+      i.classList.toggle('active', i === item);
+      i.classList.toggle('dim', i !== item);
+    });
+  });
+});
+</script>
+
+</body>
+</html>
