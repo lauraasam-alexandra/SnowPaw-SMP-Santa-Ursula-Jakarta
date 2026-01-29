@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco Heroes - PesonaEdu Solution</title>
+  <link rel="stylesheet" href="pesonaedu.css">
+  <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.1"></script>
+
+  <link rel="icon" type="maskot" href="WhatsApp Image 2025-12-11 at 23.56.46_4ef0c116.jpg" />
+</head>
+
+  <body>
+  <div class="fish-cursor">💧</div>
+  <script src="pesonaedu.js"></script>
+
+  <header class="floatingnavbar">
+    <div class="logo">
+    <img src="snow.png" alt="">
+    </div>
+<nav>
+    <ul class="nav-links">
+      <li class="dropdown">
+        <a href="index.html"><img class="home button" src="home.png" alt=""></a>
+        <ul class="homed dropdown-menu">
+          <li><a href="#about"><img class="issue dropbutton" src="issue.png" alt=""></a></li>
+          <li><a href="#facts"><img class="facts dropbutton" src="importence (2).png" alt=""></a></li>
+          <li><a href="#importence"><img class="importence dropbutton" src="importence.png" alt=""></a></li>
+          <li><a href="#vision"><img class="vision dropbutton" src="vision.png" alt=""></a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="causes1.html"><img class="cause button" src="causeseffects.png"></a>
+        <ul class="caused dropdown-menu1">
+        <li><a href="causes1.html"><img class="causes dropbutton1" src="Causes.png" alt=""></a></li>
+        <li><a href="causes1.html#effectt"><img class="effects dropbutton1" src="effect.png" alt=""></a></li>
+      </ul>
+      </li>
+      <li class="dropdown">
+        <a href="funpage.html"><img class="funpage button" src="funpage.png"></a>
+      <li class="dropdown">
+        <a href="solution.html"><img class="solution button" src="solution.png"></a>
+      <li class="dropdown">
+        <a href="aboutus.html"><img class="aboutus button" src="aboutus.png"></a>
+      <li class="dropdown">
+        <a href="aboutwebsite.html"><img class="website button" src="aboutwebsite.png"></a>
+      <li class="dropdown">
+        <a href="refrences.html"><img class="refrences button" src="refrences.png"></a>
+    </ul>
+    </nav>
+    <div class="logo1">
+    <img src="snow.png" alt="">
+    </div>
+
+    
+
+  
+  </header> 
+<body>
+    <!-- POPUP -->
+<div id="popup-overlay">
+  <div id="popup-box">
+    <h2>Welcome to SNOWPAW</h2>
+    <p>
+      A platform for climate action.<br>
+        Small actions today can protect our planet tomorrow.<br>
+        Join us and make a difference. 🌱
+    </p>
+
+    <button id="popup-close">Close</button>
+  </div>
+</div>
+
+<style>
+#popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease;
+  z-index: 9999;
+}
+
+#popup-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+#popup-box {
+  background-image: url("icebutton2.png");
+  background-size: 500px ;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'lilmarie';
+  color: rgb(13, 62, 210);
+  -webkit-text-stroke: white 0.05px;
+  font-size: 25px;
+  width: clamp(280px, 80vw, 480px);
+  aspect-ratio: 2 / 6; 
+  padding: 40px 25px;
+
+  text-align: center;
+  border-radius: 0;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+#popup-overlay.show #popup-box {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#popup-close {
+  margin-top: 20px;
+  margin-left: 160px;
+  padding: 10px 28px;
+  border: none;
+  width: 100px;
+  background: #3b82f6;
+  color: white;
+  font-size: 15px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+#popup-close:hover {
+  background: #0d6aff;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const popup = document.getElementById("popup-overlay");
+  const closeBtn = document.getElementById("popup-close");
+
+  // muncul pas load
+  setTimeout(() => {
+    popup.classList.add("show");
+  }, 400);
+
+  // auto close setelah 5 detik
+  const autoClose = setTimeout(() => {
+    popup.classList.remove("show");
+  }, 5400); // 5 detik + animasi masuk
+
+  // manual close
+  closeBtn.addEventListener("click", () => {
+    popup.classList.remove("show");
+    clearTimeout(autoClose);
+  });
+});
+</script>
+
+  <!-- Hero Section -->
+  <section id="home" class="fade-in">
+    </div>
+  
+  <img src="2.png" class="unyu float-5d">
+  <img src="4.png" class="unyu1 float-5d">
+  <img src="6.png" class="unyu2 float-5d">
+  <img src="7.png" class="unyu3 float-5d">
+  <img src="kuuuutbu.png" class="unyu4">
+  <img src="pelengkp6.png" class="stage2 float-5d">
+  <img src="maskot.png" class="maskot float-5d">
+  <img src="judul2.png" class="judul">
+  <img src="shine.png" class="shine">
+  <img src="shine2.png" class="shine2">
+<img class="snowflakes1" src="crystal1.png" alt="">
+<img class="snowflakes2" src="crystal2.png" alt="">
+        <div class="title1">What is Climate Change?</div>
+  <img class="batas float-5d"src="batas.png" alt="">
+  </section>
+      <img src="PENGUINJALAN.png" id="mobil" class="mobil">
+<!-- About Section -->
+<section id="about" class="fade-in">
+  <div class="section reveal">
+    <div class="text">
+
+        <div class="desc1">
+            Climate scientists have shown that nearly all global warming over the past 200 years is caused by human activities that release greenhouse gases and heat the Earth faster than at any time in the last two thousand years. The planet is now about 1.42°C warmer than in the late 1800s, making this the warmest period in 100,000 years, with 2015 to 2024 being the hottest decade on record. But rising temperatures are only the beginning because the Earth is interconnected, so changes in one area affect many others. As a result, climate change triggers extreme droughts, water scarcity, intense fires, rising sea levels, flooding, melting polar ice, powerful storms, and declining biodiversity.</div>
+    </div>
+
+    <div class="img-gallery">
+        <div class="kodfun-galeri">
+            <div style="background-image: url('https://i0.wp.com/gapki.id/dir-site/uploads/2025/08/perubahan_iklim_global_gapki.id_ilustrasi_jpg.jpg?fit=1036%2C678&ssl=1');"></div>
+            <div style="background-image: url('https://avaada.com/wp-content/uploads/7-Secrets-About-the-Causes-of-Climate-Change.jpg');"></div>
+            <div style="background-image: url('https://i0.wp.com/narasitoday.com/wp-content/uploads/2025/07/SGYWEGWEYWE.jpg?fit=612%2C382&ssl=1');"></div>
+            <div style="background-image: url('https://static.gatra.com/foldershared/images/2019/thytha/07-Jul/perubahan-iklim-shutterstock.jpg');"></div>
+            <div style="background-image: url('https://batuter.com/wp-content/uploads/2024/08/Iklim.jpg');"></div>
+        </div>
+    </div>               
+</div>
+<img class="maskot2 float-5d"src="maskot2.png" alt="">
+<img class="maskot3 float-5d" src="polarbear.png" alt="">
+</section>
+
+<section id="issue">
+  <img class="snowbatas1" src="snow1.png" alt="">
+   <div class="section reveal vivi">
+    <div class="text">
+        <div class="title2">The Problems We Are Facing</div>
+        <div class="desc">
+            The Earth is facing unprecedented pressure as global temperatures keep rising, leading to extreme heat, unpredictable seasons, melting polar ice, and higher sea levels that threaten coastal cities. Disasters like floods, droughts, and wildfires are becoming more frequent, while pollution harms human health and unpredictable weather puts agriculture and food supplies at risk. Natural ecosystems are losing balance, causing many species to struggle and biodiversity to decline. The climate crisis also strains the economy and society, with damaged infrastructure, rising healthcare costs, and greater impacts on vulnerable communities. Even so, we can still slow the crisis through awareness, lifestyle changes, and collective action to reduce emissions and build a safer, more sustainable future.
+</div>
+
+    <div class="img-gallery">
+        <div class="kodfun-galeri">
+            <div style="background-image: url('https://kuow-prod.imgix.net/store/8347b4eaac7a978164f5a48f35ebb721.jpg?ixlib=rails-4.3.1&fit=clip&crop=faces&auto=format&w=924&h=634');"></div>
+            <div style="background-image: url('https://www.preventionweb.net/sites/default/files/styles/landscape_16_9/public/2022-05/shutterstock_585540035-min.jpg?itok=4QBcjK7x');"></div>
+            <div style="background-image: url('https://cdn.britannica.com/11/154611-050-1222C65C/view-remains-trees-hillside-wildfires-forest-fire.jpg');"></div>
+            <div style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9cBIK4GEPzgwG2kBAwtjDalpxPobtFcrxNg&s');"></div>
+            <div style="background-image: url('https://static01.nyt.com/images/2020/09/15/climate/15CLI-BIODIVERSITY1-alt/15CLI-BIODIVERSITY1-alt-superJumbo-v3.jpg');"></div>
+        </div>
+    </div>               
+</div>
+  </section>
+
+  <section id="facts">
+      <img class="batas4 float-5d" src="batas - Copy.png" alt="">
+    <img class="overlay2 float-5d" src="iceframe.png" alt="">
+<img class="overlay3" src="blabla.png" alt="">
+    <h2 class="top">~ Top 5 Countries with the Highest Air Pollution Levels in the World ~</h2>
+
+        <div class="zoom-wrapper">
+        <img src="banner.jpg" alt="banner">
+    </div>
+
+    <!-- ====================== GLOBE INTERAKTIF ====================== -->
+<div id="globe-container" style="margin-top:-300px; 
+display:flex; 
+justify-content:center; 
+height:700px; 
+z-index: 3;
+position:absolute;
+margin-left: 700px;
+margin-top: 70px;">
+
+  <!-- POPUP -->
+  <div id="popup">
+    <h3 id="popup-title"></h3>
+    <p id="popup-content"></p>
+    <button onclick="hidePopup()">Tutup</button>
+  </div>
+
+<!-- ================= GLOBE INTERAKTIF ================= -->
+<div id="globe-container">
+  <div id="popup">
+    <h3 id="popup-title"></h3>
+    <p id="popup-content"></p>
+    <button onclick="hidePopup()">Close</button>
+  </div>
+
+  <svg id="globe" width="500" height="500"></svg>
+</div>
+
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://d3js.org/topojson.v3.min.js"></script>
+
+<style>
+#popup{
+  position:absolute;
+  top:40px;
+  right:40px;
+  width:260px;
+  padding:15px;
+  background:white;
+  border-left:6px solid #3b82f6;
+  margin-left: -700px;
+  border-radius:10px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.25);
+  display:none;
+  z-index:2000;
+}
+#popup button{
+  margin-top:10px;
+  padding:8px 12px;
+  background:#3b82f6;
+  border:none;
+  color:white;
+  border-radius:6px;
+  cursor:pointer;
+}
+#popup button:hover{
+    background: #004ccf;
+}
+.land{ fill:#0e2b4f; pointer-events:none; }
+.country{
+  fill:none;
+  stroke:rgba(255,255,255,0.35);
+  stroke-width:0.7;
+  cursor:pointer;
+}
+.night{ fill:rgba(0,0,30,0.35); pointer-events:none; }
+.hotspot{
+  fill:red;
+  stroke:white;
+  stroke-width:2;
+  cursor:pointer;
+}
+.hotspot:hover{
+    fill:rgb(195, 0, 0);
+}
+</style>
+<script>
+/* ================= POPUP ================= */
+function showPopup(name){
+  const info = {
+    "Chad":
+      "Chad has extremely high air pollution due to Sahara dust storms, biomass burning, and limited air quality control.",
+
+    "Bangladesh":
+      "Air pollution in Bangladesh is driven by industrial emissions, vehicle exhaust, brick kilns, and high population density.",
+
+    "Pakistan":
+      "Pakistan suffers from poor air quality caused by vehicle emissions, fossil fuel use, and industrial activity.",
+
+    "Democratic Republic of the Congo":
+      "Air pollution mainly comes from wood burning, deforestation, and limited environmental infrastructure.",
+
+    "India":
+      "India is among the most polluted countries due to heavy traffic, coal power plants, industry, and open burning."
+  };
+
+  document.getElementById("popup-title").innerText = name;
+  document.getElementById("popup-content").innerText =
+    info[name] || "No data available.";
+  document.getElementById("popup").style.display = "block";
+}
+
+function hidePopup(){
+  document.getElementById("popup").style.display = "none";
+}
+
+/* ================= SUN POSITION ================= */
+Date.prototype.getDOY = function(){
+  const start = new Date(this.getFullYear(),0,0);
+  return Math.floor((this - start) / 86400000);
+};
+
+function solarPosition(t){
+  const doy = t.getDOY();
+  const UTC = t.getUTCHours() + t.getUTCMinutes()/60;
+  const decl = 23.44 * Math.sin((2 * Math.PI / 365) * (doy - 81));
+  const lon = 180 - UTC * 15;
+  return [lon, decl];
+}
+
+/* ================= SVG & PROJECTION ================= */
+const svg = d3.select("#globe");
+const w = 500, h = 500;
+const center = [w/2, h/2];
+const radius = 240;
+
+const proj = d3.geoOrthographic()
+  .scale(radius)
+  .translate(center)
+  .rotate([0, -20])
+  .clipAngle(90);
+
+const path = d3.geoPath().projection(proj);
+
+/* ================= LOAD MAP ================= */
+d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json")
+.then(world => {
+
+  const land = topojson.feature(world, world.objects.land);
+  const key = Object.keys(world.objects)
+    .find(k => k.includes("countries") || k.includes("admin"));
+  const countries = topojson.feature(world, world.objects[key]).features;
+
+  svg.append("circle")
+    .attr("cx", center[0])
+    .attr("cy", center[1])
+    .attr("r", radius)
+    .attr("fill", "#bcd8f5");
+
+  svg.append("path")
+    .datum(land)
+    .attr("class", "land")
+    .attr("d", path);
+
+  const c = svg.append("g")
+    .selectAll("path")
+    .data(countries)
+    .enter()
+    .append("path")
+    .attr("class", "country")
+    .on("click", d => {
+      const name =
+        d.properties.name_long ||
+        d.properties.name ||
+        d.properties.ADMIN ||
+        "Unknown";
+      showPopup(name);
+    });
+
+  const night = svg.append("path").attr("class", "night");
+
+  /* ================= HOTSPOTS ================= */
+  const hotspotsData = [
+    { name: "Chad", coords: [18, 15] },
+    { name: "Bangladesh", coords: [90, 24] },
+    { name: "Pakistan", coords: [69, 30] },
+    { name: "Democratic Republic of the Congo", coords: [23, -3] },
+    { name: "India", coords: [78, 21] }
+  ];
+
+  const hotspots = svg.append("g")
+    .selectAll("circle")
+    .data(hotspotsData)
+    .enter()
+    .append("circle")
+    .attr("class", "hotspot")
+    .attr("r", 9)
+    .on("click", d => showPopup(d.name));
+
+  /* ================= DRAG + AUTO ROTATE ================= */
+  let autoRotate = true;
+
+  svg.call(
+    d3.drag()
+      .on("start", () => autoRotate = false)
+      .on("drag", () => {
+        const r = proj.rotate();
+        proj.rotate([
+          r[0] + d3.event.dx * 0.4,
+          r[1] - d3.event.dy * 0.4
+        ]);
+        render();
+      })
+      .on("end", () => autoRotate = true)
+  );
+
+  d3.timer(() => {
+    if(autoRotate){
+      const r = proj.rotate();
+      proj.rotate([r[0] + 0.12, r[1]]);
+    }
+    render();
+  });
+
+  /* ================= RENDER ================= */
+  function render(){
+    const now = new Date();
+    const sun = solarPosition(now);
+    const nightSide = [sun[0] + 180, -sun[1]];
+
+    night.datum(
+      d3.geoCircle().center(nightSide).radius(90)()
+    ).attr("d", path);
+
+    svg.selectAll(".land").attr("d", path);
+    c.attr("d", path);
+
+    hotspots.attr("transform", d => {
+      const p = proj(d.coords);
+      return `translate(${p[0]},${p[1]})`;
+    });
+  }
+});
+</script>
+
+<!-- ================= IMPACT CARD ================= -->
+<!-- ================= IMPACT CARD ================= -->
+<div class="impact-zone">
+  <div class="impact-grid">
+
+    <div class="impact-card float-5d" style="background-image:url('iceblock.png')">
+      <span class="impact-front">CLICK THIS</span>
+      <div class="impact-back">
+Chad, Bangladesh, Pakistan, the Democratic Republic of Congo, and India experience high levels of air pollution due to natural factors, industrialization, and population density. This negatively impacts people's health and quality of life.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ================= STYLE ================= -->
+<style>
+/* ZONE */
+.impact-zone {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 80px 0;
+  margin-top: 20px;
+}
+
+/* GRID */
+.impact-grid {
+  display: flex;
+}
+
+/* CARD — BENARAN CUMA GAMBAR */
+.impact-card {
+  position: absolute;
+  width: 600px;
+  height: 400px;
+  margin-left: -1200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* FRONT TEXT (FLOAT DI ATAS GAMBAR) */
+.impact-front {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  transition: opacity .3s;
+}
+
+/* BACK OVERLAY */
+.impact-back {
+    position: absolute;
+  width: 600px;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  inset: 0;
+  background-image: url(iceblock2.png);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+    -webkit-text-stroke: 0.1 white;
+    color: rgb(0, 189, 189);
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+p.impact-back {
+
+    margin-top: -50px;
+}
+
+/* ACTIVE */
+.impact-card.active .impact-front {
+  opacity: 0;
+}
+
+.impact-card.active .impact-back {
+  opacity: 1;
+}
+</style>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+document.querySelectorAll(".impact-card").forEach(card => {
+  card.addEventListener("click", () => {
+    card.classList.toggle("active");
+  });
+});
+</script>
+  </section>
+
+<section id="facts2">
+  <img class="tape"src="tape.png" alt="">
+    <img class="overlay4 float-5d"src="overlay3.png" alt="">
+        <div class="chart-container">
+            
+  <canvas id="tempChart"></canvas>
+</div>
+
+  <div class="nasa-chart-source">Source: climate.nasa.gov</div>
+</div>
+
+<div class="card" id="info-card">
+        <h3>💡</h3>
+        <p>NASA reports a clear warming trend: 2024 is the hottest year recorded, with global temperatures ~1.28°C above 1951–1980 and ~1.47°C above pre-industrial levels. Human activities drive this rise, triggering extreme heat, sea-level rise, ice melt, stronger storms, and widespread impacts on ecosystems and human life.</p>
+</div>
+
+
+<script>
+const card = document.getElementById("info-card");
+card.addEventListener("click", () => {
+  card.style.transition = "opacity 0.6s ease";
+  card.style.opacity = 0;
+  setTimeout(() => {
+    card.style.display = "none";
+  }, 600); // durasi fade = 0.6s
+});
+</script>
+</section>
+
+<section id="facts3">
+      <h2 class="top">~ Graphics and Datas ~ Scroll to right!</h2>
+  <div class="popup-card-wrapper">
+    <div class="popup-card" id="pcard1">
+      <img src="Screenshot 2025-12-14 064341.png" alt="Card 1 Image" class="popup-card-img">
+      <div class="popup-card-text">
+        <h3>💡 Climate Fact 1</h3>
+        <p>Global sea levels have risen ~9 cm since 1993 due to warming oceans and melting ice, increasing coastal flooding and risks for millions. Climate change is real, and urgent action is needed.</p>
+      </div>
+    </div>
+
+    <div class="popup-card" id="pcard2">
+      <img src="Screenshot 2025-12-14 064352.png" alt="Card 2 Image" class="popup-card-img">
+      <div class="popup-card-text">
+        <h3>🌍 NASA’s CO₂ concentration graph</h3>
+        <p>CO₂ levels have risen sharply from fossil fuels, fires, and ice melt, driving the greenhouse effect, global warming, ice melt, sea-level rise, and ecosystem and human impacts.</p>
+      </div>
+    </div>
+
+    <div class="popup-card" id="pcard3">
+      <img src="Screenshot 2025-12-14 064713.png" alt="Card 3 Image" class="popup-card-img">
+      <div class="popup-card-text">
+        <h3>🔥This BMKG graph for Indonesia</h3>
+        <p>Shows a clear warming trend, with 2024 temperatures ~0.8 °C above the 1991–2020 average, highlighting climate change’s impact on the environment, health, and livelihoods.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- POPUP IMAGE -->
+  <div class="popup-overlay" id="popupOverlay">
+    <img src="" alt="Popup Image" id="popupImage">
+  </div>
+
+  <style>
+    .popup-card-wrapper {
+      display: flex;
+      margin-top: 50px;
+      gap: 20px;
+      overflow-x: auto;
+      padding: 20px;
+      width: 100vw; 
+      box-sizing: border-box; 
+      scroll-behavior: smooth;
+      z-index: 1000;
+    }
+
+    .popup-card {
+      flex: 0 0 auto; 
+      width: 420px;
+      height: 450px;
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+      background: transparent;
+    }
+
+    .popup-card:hover {
+      transform: scale(1.025);
+      transition: ease-in-out 0.5s;
+    }
+
+    .popup-card-img {
+      width: 400px;
+      height: 200px;
+      z-index: 2000;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .popup-card-text {
+      padding: 15px;
+      text-align: justify;
+      font-family: 'dunkin';
+    }
+
+    .popup-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 5000;
+    }
+
+    #popupImage {
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+      animation: popupZoom 0.4s ease forwards;
+    }
+
+    @keyframes popupZoom {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+
+  <script>
+    const popupOverlay = document.getElementById("popupOverlay");
+    const popupImage = document.getElementById("popupImage");
+
+    document.querySelectorAll(".popup-card-img").forEach(img => {
+      img.addEventListener("click", () => {
+        popupImage.src = img.src;
+        popupOverlay.style.display = "flex";
+      });
+    });
+
+    popupOverlay.addEventListener("click", () => {
+      popupOverlay.style.display = "none";
+    });
+  </script>
+</section>
+
+<section id="facts4">
+  <img class="batas3"src="batas.png" alt="">
+  <style>
+  .flip-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    z-index: 3;
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  .flip-card {
+    background-color: transparent;
+    width: 200px;
+    height: 160px;
+    perspective: 1000px;
+    flex: 0 0 auto;
+    font-family: 'dunkin';
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border-radius: 12px;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  .flip-card-front {
+    background: transparent;
+    color: white;
+    -webkit-text-stroke: rgb(0, 216, 216) 0.5px;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .flip-card-back {
+    background: white;
+    color: #111827;
+    -webkit-text-stroke: #3b82f6 0.5px;
+    transform: rotateY(180deg);
+    font-size: 10px;
+    font-weight: 5px;
+    text-align: justify;
+    overflow: auto;
+  }
+</style>
+
+<div class="flip-card-container">
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">Jakarta Flooding (Indonesia)</div>
+      <div class="flip-card-back">
+        Jakarta is one of the cities most vulnerable to climate change. Recurrent major floods inundated 300+ locations in 2020, causing fatalities and mass evacuations. Rising rainfall intensity worsens conditions.
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">Forest Fires in Kalimantan & Sumatra (Indonesia)</div>
+      <div class="flip-card-back">
+        Longer, drier seasons have intensified forest fires. In 2019, fires caused haze across Indonesia, Malaysia, Singapore, damaging ecosystems and affecting millions with respiratory illnesses.
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">Extreme Heat Waves (Indonesia)</div>
+      <div class="flip-card-back">
+        Around 48.6 million people (~17% of Indonesia's population) experienced extreme heat Dec 2024–Feb 2025, linked to fossil fuel-driven global warming.
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">Floods & Landslides Early 2025 (Indonesia)</div>
+      <div class="flip-card-back">
+        Severe flooding and landslides hit many regions in early 2025. Changes in weather patterns from climate extremes increase disaster frequency and intensity.
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">Arctic Ice Melt (Global)</div>
+      <div class="flip-card-back">
+        Arctic and Antarctic ice continues to shrink, reaching the tenth-lowest Arctic extent on record, contributing to global sea level rise and threatening coastal cities worldwide.
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">Drought in East Africa (Global)</div>
+      <div class="flip-card-back">
+        Kenya, Ethiopia, and Somalia face longer, intense dry seasons. Climate change worsens food insecurity and triggers conflicts over scarce resources.
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">Super Typhoon Haiyan (Philippines)</div>
+      <div class="flip-card-back">
+        In 2013, Haiyan, intensified by warmer oceans, killed 6,000+ people, destroyed infrastructure, and left millions homeless.
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">Record Global Temperatures (Global)</div>
+      <div class="flip-card-back">
+        2024 marked the first year global average temperatures reached 1.5°C above pre-industrial levels, surpassing Paris Agreement targets. 2025 projections suggest record heat.
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
+<section id="importence">
+        <h2 class="top">Why the Small Actions We Take Are Important</h2>
+  <style>
+  .textbox-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px 0;
+  }
+
+  .textbox {
+    background: #f3f4f6;
+    border-left: 5px solid #2563eb;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #111827;
+  }
+
+.textbox{
+      font-family: 'dunkin';
+      font-size: 15px;
+      -webkit-text-stroke: white 0.5px;
+}
+
+  .textbox:hover{
+        background:white;
+        transition: 0.4s ease-in-out;
+            border-left: 5px solid cyan;
+  }
+</style>
+
+<div class="textbox-container">
+  <div class="textbox">
+  We often feel that small actions won’t make a difference. However, it is precisely through these simple and small steps that big changes can happen. Reducing single-use plastics, saving energy at home, or choosing eco-friendly transportation may seem trivial, but if done by millions of people, the impact can be significant.
+  </div>
+  <div class="textbox">
+    Small actions also have the power to spread. When one person starts taking action, others are inspired and follow suit. From daily habits, a new culture that cares more for the planet emerges. Moreover, small actions demonstrate our commitment: that we are not just waiting for others or the government, but actively taking responsibility for the future.
+  </div>
+  <div class="textbox">
+    In other words, every small step is part of a larger movement. The climate crisis is indeed a global problem, but the solution begins with individual choices. If we all act together, small actions will become the foundation for major changes that save the Earth.
+  </div>
+</div>
+</section>
+<section id="importence2">
+<style>
+* { box-sizing: border-box; }
+
+body{
+  margin:0;
+  min-height:100vh;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: linear-gradient(180deg,#0f2027,#203a43,#2c5364);
+  color:#fff;
+  overflow-x:hidden;
+}
+
+.winterfx-snow-layer{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:1;
+}
+.winterfx-snow{
+  position:absolute;
+  top:-10px;
+  color:#fff;
+  opacity:.6;
+  animation:winterfx-fall linear infinite;
+}
+@keyframes winterfx-fall{
+  to{ transform: translateY(110vh); }
+}
+
+.winterfx-section{
+  position:relative;
+  z-index:5;
+  padding:80px 16px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.winterfx-title{
+  text-align:center;
+  margin-bottom:200px;
+  font-family: 'porkys';
+  letter-spacing:1px;
+}
+
+.winterfx-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap:24px;
+}
+
+.winterfx-card{
+  position:relative;
+  padding:22px;
+  padding-top:42px; 
+  border-radius:20px;
+  margin-top: -100px;
+  transition:.4s ease;
+  background: rgba(255,255,255,.18);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 40px rgba(0,0,0,.35);
+}
+
+.winterfx-card:hover{
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 30px 60px rgba(0,0,0,.45),
+    0 0 24px rgba(180,220,255,.6);
+}
+
+.winterfx-real-badge{
+  position:absolute;
+  top:-26px;
+  left:50%;
+  transform: translateX(-50%);
+  z-index:20;
+  width:64px;
+  height:64px;
+  border-radius:50%;
+  background: linear-gradient(135deg,#e8f6ff,#b8ddff);
+  box-shadow:
+  0 10px 25px rgba(0,0,0,.35),
+  inset 0 0 12px rgba(255,255,255,.8);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:3px;
+  font-size:25px;
+  font-weight:700;
+  letter-spacing:2px;
+  color:#0f2027;
+  pointer-events:none;
+}
+
+.winterfx-card:hover .winterfx-real-badge{
+  transform: translateX(-50%) scale(1.05);
+}
+
+.winterfx-card img{
+  width:240px;
+  margin-left: -10px;
+  height: 200px;
+  border-radius:14px;
+  margin-bottom:auto;
+  display:block;
+  object-fit: cover;
+}
+
+.winterfx-card h3{
+  margin:10px 0 6px;
+}
+.winterfx-card p{
+  margin:0;
+  opacity:.9;
+  text-align: justify};
+</style>
+</head>
+
+<body>
+
+<div class="winterfx-snow-layer" id="winterfxSnow"></div>
+
+<section class="winterfx-section">
+  <h2 class="winterfx-title">❄ What You Can Get Through This Website ❄</h2>
+
+  <div class="winterfx-grid">
+
+    <div class="winterfx-card">
+      <div class="winterfx-real-badge">
+        <span>R</span>
+      </div>
+      <img src="https://i.pinimg.com/1200x/1a/56/de/1a56dec8551582779efc9bade595bd1a.jpg" alt="reflect">
+      <h3>Reflect</h3>
+      <p>Reflecting on the things that can be done by individuals, schools, and the surrounding community.</p>
+    </div>
+
+    <div class="winterfx-card">
+      <div class="winterfx-real-badge">
+      <span>E</span>
+      </div>
+      <img src="https://i.pinimg.com/1200x/bd/d2/ef/bdd2ef9f67e18c03929089c7b9efe5c0.jpg" alt="explore">
+      <h3>Explore</h3>
+      <p>Being able to explore solutions, innovations, and concrete actions from all over the world related to global warming.</p>
+    </div>
+
+    <div class="winterfx-card">
+      <div class="winterfx-real-badge">
+      <span>A</span>
+      </div>
+      <img src="https://i.pinimg.com/736x/bc/e8/78/bce878c9a8c0e23eadf32dec2cd2e8f6.jpg" alt="act">
+      <h3>Act</h3>
+      <p>Encouragement to take simple actions that can start today for the sake of our planet.</p>
+    </div>
+
+    <div class="winterfx-card">
+      <div class="winterfx-real-badge">
+  <span>L</span>
+      </div>
+      <img src="https://i.pinimg.com/1200x/26/61/43/26614316b32ba67856224f69f033e97d.jpg" alt="Learn">
+      <h3>Learn</h3>
+      <p>Through this website, visitors will receive explanations that are easy to understand, detailed, and engaging about climate change and its impacts.</p>
+    </div>
+
+  </div>
+</section>
+
+<script>
+const snowLayer = document.getElementById("winterfxSnow");
+for(let i=0;i<40;i++){
+  const s=document.createElement("div");
+  s.className="winterfx-snow";
+  s.innerHTML="❄";
+  s.style.left=Math.random()*100+"vw";
+  s.style.fontSize=(Math.random()*8+10)+"px";
+  s.style.animationDuration=(Math.random()*6+6)+"s";
+  snowLayer.appendChild(s);
+}
+</script>
+</section>
+
+<section id="vision">
+  <!-- ANIMATED VISI & MISI DENGAN GAMBAR -->
+<div class="vm-wrapper" style="max-width:600px; margin:30px auto; font-family:Arial, sans-serif; text-align:center;">
+
+  <button class="vm-btn" id="showVisi" style="padding:10px 20px; margin:10px 0;  border:none; border-radius:8px; background:#1f4ce0; color:white; font-weight:bold; cursor:pointer; transition:0.3s;">✨ Show Vision</button>
+  <div id="visi-text" style="margin:15px 0; font-size:16px; -webkit-text-stroke:#1f4ce0 0.4px; font-weight:200px; font-family:'dunkin'; color:white; padding:40px; background:url('icebutton.png') no-repeat center/cover; opacity:0; transform:translateY(20px); transition:0.6s;">
+    🌟 Creating a sustainable, climate-resilient world where every generation is aware, responsible, and courageous to act. We commit to a safe, fair, and healthy future for people and the planet, prioritizing climate action for our shared survival.
+  </div>
+
+  <button class="vm-btn" id="showMisi" style="padding:10px 20px; margin:10px 0; border:none; border-radius:8px; background:#196bc2; color:white; font-weight:bold; cursor:pointer; transition:0.3s;">💡Show Mission</button>
+  <div id="misi-text" style="margin:15px 0; font-size:16px;">
+    <p class="misi-point1" style="opacity:0; transform:translateY(20px); transition:0.5s; background:rgb(169, 216, 255); border-radius: 30px; border: #00a2f3 2px solid; no-repeat center/cover; color:white; padding:20px; border-radius:12px;">1️⃣ Raising Awareness <br> Providing clear, easy-to-understand, and factual information about climate change and its impact on daily life..</p>
+    <p class="misi-point2" style="opacity:0; transform:translateY(20px); transition:0.5s; margin-left: 200px; background:rgb(169, 189, 255); border-radius: 30px; border: #0039f3 2px solid; no-repeat center/cover; color:white; padding:20px; border-radius:12px;">2️⃣ Inspiring Action <br> Offering a space for young people to discover ideas, solutions, and concrete steps to tackle the climate crisis.</p>
+    <p class="misi-point3" style="opacity:0; transform:translateY(20px); transition:0.5s; background:rgb(169, 251, 255); border-radius: 30px; border: #00cff3 2px solid; no-repeat center/cover; color:white; padding:20px; border-radius:12px;">3️⃣ Driving Change <br> Encouraging individuals to speak up, influence policies, and choose a greener, more sustainable future.</p>
+  </div>
+</div>
+
+<script>
+// Visi fade + slide
+document.getElementById("showVisi").addEventListener("click", () => {
+  const visi = document.getElementById("visi-text");
+  visi.style.opacity = "1";
+  visi.style.transform = "translateY(0)";
+});
+
+// Misi muncul satu per satu
+document.getElementById("showMisi").addEventListener("click", () => {
+  const points = document.querySelectorAll("#misi-text .misi-point");
+  points.forEach((p, index) => {
+    setTimeout(() => {
+      p.style.opacity = "1";
+      p.style.transform = "translateY(0)";
+    }, index * 500);
+  });
+});
+</script>
+<!-- ANIMATED VISI & MISI DENGAN GAMBAR END -->
+
+</section>
+  <footer>
+    <p>© 2025 PesonaEdu Solution | Designed for Eco Heroes Project</p>
+  </footer>
+
+  <!-- Script untuk animasi scroll -->
+  <script>
+    const elements = document.querySelectorAll('.fade-in');
+
+    function checkScroll() {
+      const triggerBottom = window.innerHeight * 0.85;
+      elements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < triggerBottom) {
+          el.classList.add('show');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkScroll);
+    checkScroll();
+  </script>
+<script>
+/* ===== SCROLL REVEAL EFFECT ===== */
+const sections = document.querySelectorAll(".section");
+
+function revealOnScroll(){
+    sections.forEach(sec=>{
+        const rect = sec.getBoundingClientRect();
+        if(rect.top < window.innerHeight - 120){
+            sec.classList.add("visible");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+</script>
+
+</body>
+</html>
